@@ -26,13 +26,12 @@ gulp.task('glyphicon',function(){
 
 gulp.task('bootstrap',['glyphicon'],function(){
   gulp.src('node_modules/bootstrap/dist/css/bootstrap.min.css')
-    .pipe(gulp.dest('src/style'));
+    .pipe(gulp.dest('dist/style'));
 });
 
-//gulp.task('style',['bootstrap'],function(){
-gulp.task('style',function(){
+gulp.task('style',['bootstrap'],function(){
   gulp.src(paths.style)
-    .pipe(concat('bundle.min.css'))
+    .pipe(concat('app.min.css'))
     .pipe(minifyCSS())
     .pipe(gulp.dest('dist/style'));
 });

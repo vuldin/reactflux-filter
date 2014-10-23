@@ -18,9 +18,8 @@ Install dependencies:
 npm install
 ```
 
-Build the project:
+Build the project (may need to add ./node_modules/.bin to your path):
 ```
-gulp bootstrap (only needed once)
 gulp
 ```
 
