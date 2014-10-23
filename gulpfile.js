@@ -3,6 +3,7 @@ var uglify = require('gulp-uglify');
 var browserify = require('gulp-browserify');
 var concat = require('gulp-concat');
 var minifyCSS = require('gulp-minify-css');
+var clean = require('gulp-clean');
 
 var mainFile = 'src/js/main.js';
 var paths = {
@@ -26,13 +27,12 @@ gulp.task('glyphicon',function(){
 
 gulp.task('bootstrap',['glyphicon'],function(){
   gulp.src('node_modules/bootstrap/dist/css/bootstrap.min.css')
-    .pipe(gulp.dest('src/style'));
+    .pipe(gulp.dest('dist/style'));
 });
 
-//gulp.task('style',['bootstrap'],function(){
-gulp.task('style',function(){
+gulp.task('style',['bootstrap'],function(){
   gulp.src(paths.style)
-    .pipe(concat('bundle.min.css'))
+    .pipe(concat('app.min.css'))
     .pipe(minifyCSS())
     .pipe(gulp.dest('dist/style'));
 });
@@ -46,4 +46,11 @@ gulp.task('default',['script','style','html']);
 
 gulp.task('watch',function(){
   gulp.watch('src/**/*.*',['default']);
+});
+
+gulp.task('clean',function(){
+  gulp.src('dist/',{read:false})
+    .pipe(clean());
+  gulp.src('bin/',{read:false})
+    .pipe(clean());
 });
