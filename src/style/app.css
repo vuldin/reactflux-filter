@@ -1,0 +1,54 @@
+body{
+  background-color:grey !important;
+}
+#main{
+  padding:0px;
+  overflow:hidden;
+}
+.filter .disable{
+  background-color:lightgrey;
+  color:#5c5c5c;
+}
+.filter .enable{
+  background-color:#5c5c5c;
+  color:#e8edf0;
+}
+.filter div.main{
+  display:inline-block;
+  position:relative;
+  overflow:hidden;
+  padding-left:5px;
+  padding-right:5px;
+  border-right:1px black solid;
+}
+.filter .opaque{
+  opacity:0.2;
+}
+.filter div.main .filterLabel{
+  position:absolute;
+  top:50%;
+  transform:translate(0px,-50%);
+  height:20px;
+  cursor:default;
+  user-select:none;
+  -webkit-touch-callout:none;
+  -webkit-user-select:none;
+  -khtml-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+}
+.filter div.expander{
+  display:inline-block;
+  position:relative;
+  width:15px;
+  cursor:default;
+}
+.filter div.expander span{
+  position:absolute;
+  top:50%;
+  right:0px;
+  transform:translate(0px,-50%);
+}
+.filter .noChildren span.expander{
+  display:none;
+}

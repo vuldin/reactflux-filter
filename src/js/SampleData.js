@@ -1,0 +1,137 @@
+module.exports = {
+  init:function(){
+    localStorage.clear();
+    localStorage.setItem('items',JSON.stringify([
+{
+  "text":"Show",
+  "enabled":true,
+  "expanded":false,
+  "children":[
+    {
+      "text":"Fairy Tale Ending",
+      "enabled":true,
+      "expanded":false,
+      "children":[]
+    },
+    {
+      "text":"Feeding Frenzy",
+      "enabled":true,
+      "expanded":false,
+      "children":[]
+    },
+    {
+      "text":"Next Generation Family",
+      "enabled":true,
+      "expanded":false,
+      "children":[]
+    },
+    {
+      "text":"Stuck In Between",
+      "enabled":true,
+      "expanded":false,
+      "children":[]
+    }
+  ]
+},
+{
+  "text":"Gender",
+  "enabled":true,
+  "expanded":false,
+  "children":[
+    {
+      "text":"Female",
+      "enabled":true,
+      "expanded":false,
+      "children":[]
+    },
+    {
+      "text":"Male",
+      "enabled":true,
+      "expanded":false,
+      "children":[]
+    }
+  ]
+},
+{
+  "text":"Age",
+  "enabled":true,
+  "expanded":false,
+  "children":[
+    {
+      "text":"0-5",
+      "enabled":true,
+      "expanded":false,
+      "children":[]
+    },
+    {
+      "text":"6-11",
+      "enabled":true,
+      "expanded":false,
+      "children":[]
+    },
+    {
+      "text":"12-17",
+      "enabled":true,
+      "expanded":false,
+      "children":[]
+    },
+    {
+      "text":"18-24",
+      "enabled":true,
+      "expanded":false,
+      "children":[]
+    },
+    {
+      "text":"25-29",
+      "enabled":true,
+      "expanded":false,
+      "children":[]
+    },
+    {
+      "text":"30+",
+      "enabled":true,
+      "expanded":false,
+      "children":[]
+    }
+  ]
+},
+{
+  "text":"Income",
+  "enabled":true,
+  "expanded":false,
+  "children":[
+    {
+      "text":"<$10K",
+      "enabled":true,
+      "expanded":false,
+      "children":[]
+    },
+    {
+      "text":"$10K-$20K",
+      "enabled":true,
+      "expanded":false,
+      "children":[]
+    },
+    {
+      "text":"$20K+",
+      "enabled":true,
+      "expanded":false,
+      "children":[]
+    }
+  ]
+},
+{
+  "text":"Children?",
+  "enabled":true,
+  "expanded":false,
+  "children":[]
+},
+{
+  "text":"Predictions?",
+  "enabled":false,
+  "expanded":false,
+  "children":[]
+}
+    ]));
+  }
+};
