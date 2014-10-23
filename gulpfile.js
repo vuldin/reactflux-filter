@@ -3,6 +3,7 @@ var uglify = require('gulp-uglify');
 var browserify = require('gulp-browserify');
 var concat = require('gulp-concat');
 var minifyCSS = require('gulp-minify-css');
+var clean = require('gulp-clean');
 
 var mainFile = 'src/js/main.js';
 var paths = {
@@ -45,4 +46,11 @@ gulp.task('default',['script','style','html']);
 
 gulp.task('watch',function(){
   gulp.watch('src/**/*.*',['default']);
+});
+
+gulp.task('clean',function(){
+  gulp.src('dist/',{read:false})
+    .pipe(clean());
+  gulp.src('bin/',{read:false})
+    .pipe(clean());
 });

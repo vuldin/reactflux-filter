@@ -13,6 +13,11 @@ Clone this repo:
 git clone https://github.com/joshuapurcell/reactflux-filter.git
 ```
 
+Change into the directory:
+```
+cd reactflux-filter
+```
+
 Install dependencies:
 ```
 npm install
@@ -28,6 +33,8 @@ Start the web server:
 http-server dist/
 ```
 Open [http://localhost:8080](http://localhost:8080) in your browser (tested mainly in Firefox nightly). This project handles multiple instances, so feel free to open up a few windows and any filter changes will automatically be updated with changes.
+
+The project does not *require* running the web server (provided by http-server in the line above)... you could just open dist/index.html directly.
 
 Development
 -----------
