@@ -1,6 +1,8 @@
 reactflux-filter
 ================
 
+![initial filter section screenshot](https://joshuapurcell.github.io/reactflux-filter/images/filter-221013.png)
+
 A data-driven React component (using the Flux pattern) that provides filtering on a predefined dataset.
 
 Quick start
