@@ -1,7 +1,7 @@
-var Dispatcher = require('./dispatcher.js');
-var merge  = require('react/lib/merge');
+var Dispatcher = require('flux').Dispatcher;
+var copyProperties = require('react/lib/copyProperties');
 
-var AppDispatcher = merge(Dispatcher.prototype,{
+var AppDispatcher = copyProperties(new Dispatcher(),{
   handleServerAction:function(action){
     this.dispatch({
       source:'SERVER_ACTION',
