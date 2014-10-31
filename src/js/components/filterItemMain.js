@@ -1,7 +1,7 @@
 /** @jsx React.DOM */
 var React = require('react');
 
-var AppActions = require('../actions/app-actions.js');
+var AppActions = require('../actions/app-actions');
 
 var FilterItemMain = React.createClass({
   render:function(){

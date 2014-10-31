@@ -5,10 +5,11 @@ var AppDispatcher = require('../dispatchers/app-dispatcher');
 var AppConstants = require('../constants/app-constants');
 
 var CHANGE_EVENT = 'change';
+var OTHERS=true; // determines target(s) of _setKey function
 
 var _filter = {};
 
-function _setKey(item,keys,vals,isOthers,array){
+function _setKey(isOthers,item,keys,vals,array){
   var items=_filter.items;
   if(array != undefined) items=array;
   items.forEach(function(d,i){
@@ -44,20 +45,20 @@ function _setFilter(filter){
   _filter = filter;
 }
 function _enableItem(item){
-  _setKey(item,['enabled'],[true],false);
-  _setKey(item,['enabled'],[true],true,item.childrenobj.items);
+  _setKey(!OTHERS,item,['enabled'],[true]);
+  _setKey(OTHERS,item,['enabled'],[true],item.childrenobj.items);
 }
 function _disableItem(item){
-  _setKey(item,['enabled'],[false],false);
-  _setKey(item,['enabled'],[false],true,item.childrenobj.items);
+  _setKey(!OTHERS,item,['enabled'],[false]);
+  _setKey(OTHERS,item,['enabled'],[false],item.childrenobj.items);
 }
 function _expandItem(item){
-  _setKey(item,['display','opaque'],[false,true],true);
-  _setKey(item,['display','opaque'],[true,false],false);
+  _setKey(OTHERS,item,['display','opaque'],[false,true]);
+  _setKey(!OTHERS,item,['display','opaque'],[true,false]);
 }
 function _contractItem(item){
-  _setKey(item,['display'],[false],false);
-  _setKey(item,['opaque'],[false],true);
+  _setKey(!OTHERS,item,['display'],[false]);
+  _setKey(OTHERS,item,['opaque'],[false]);
 }
 var AppStore = merge(EventEmitter.prototype, {
   emitChange:function(){

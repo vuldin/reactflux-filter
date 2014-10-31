@@ -1,7 +1,7 @@
 /** @jsx React.DOM */
 var React = require('react');
 
-var FilterItem = require('./filterItem.js');
+var FilterItem = require('./filterItem');
 
 var FilterItems = React.createClass({
   componentDidMount:function(){

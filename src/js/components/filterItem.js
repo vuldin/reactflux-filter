@@ -1,8 +1,8 @@
 /** @jsx React.DOM */
 var React = require('react/addons');
 
-var FilterItemMain = require('./filterItemMain.js');
-var FilterItemExpand = require('./filterItemExpand.js');
+var FilterItemMain = require('./filterItemMain');
+var FilterItemExpand = require('./filterItemExpand');
 
 var FilterItem = React.createClass({
   render:function(){

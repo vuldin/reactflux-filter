@@ -1,5 +1,5 @@
-var AppConstants = require('../constants/app-constants.js');
-var AppDispatcher = require('../dispatchers/app-dispatcher.js');
+var AppConstants = require('../constants/app-constants');
+var AppDispatcher = require('../dispatchers/app-dispatcher');
 
 var AppActions = {
   setLocalFilter:function(filter){
@@ -8,6 +8,12 @@ var AppActions = {
       item:filter
     })
   },
+  addLocalItem:function(item){
+    AppDispatcher.handleServerAction({
+      actionType:AppConstants.ADDLOCALITEM,
+      item:item
+    })
+  }
   enable:function(item){
     AppDispatcher.handleViewAction({
       actionType:AppConstants.ENABLE,

@@ -1,7 +1,7 @@
 var Firebase = require('firebase');
 
-var AppActions = require('../actions/app-actions.js');
-var AppStore = require('../stores/app-store.js');
+var AppActions = require('../actions/app-actions');
+var AppStore = require('../stores/app-store');
 
 var firebaseRef = new Firebase('https://react-filter.firebaseio.com/filter/');
 firebaseRef.on('child_changed',function(snapshot){

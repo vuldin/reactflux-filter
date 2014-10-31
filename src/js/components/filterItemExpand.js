@@ -1,8 +1,8 @@
 /** @jsx React.DOM */
 var React = require('react/addons');
 
-var AppActions = require('../actions/app-actions.js');
-var ExpanderItem = require('./expanderItem.js');
+var AppActions = require('../actions/app-actions');
+var ExpanderItem = require('./expanderItem');
 
 var FilterItemExpand = React.createClass({
   render:function(){
@@ -11,11 +11,6 @@ var FilterItemExpand = React.createClass({
     var cx = React.addons.classSet;
     var classes = cx({
       'glyphicon':true,
-      /*
-      'glyphicon-plus':!childrenobj.display,
-      'glyphicon-minus':childrenobj.display
-      'glyphicon-chevron-left':!childrenobj.display,
-      */
       'glyphicon-chevron-right':childrenobj.display
     });
     var styles={
@@ -41,7 +36,6 @@ var FilterItemExpand = React.createClass({
           height = +height.substring(0,height.length-2);
         }else height=window.innerHeight;
         height=height/childrenobj.items.length;
-        //height-=1; // border-bottom: 1px
         height=height+'px';
       }
       var isLast=this.props.isLast;

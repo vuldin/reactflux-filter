@@ -1,9 +1,9 @@
 /** @jsx React.DOM */
 var React = require('react');
 
-var AppStore = require('../stores/app-store.js');
-var FilterItems = require('./filterItems.js');
-var FirebaseUtils = require('../utils/firebaseUtils.js');
+var AppStore = require('../stores/app-store');
+var FilterItems = require('./filterItems');
+var FirebaseUtils = require('../utils/firebaseUtils');
 
 function getFilter(){
   return {filter:AppStore.getFilter()};
